@@ -1,0 +1,34 @@
+{
+  "name": "msg",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "start": "tsc && vite build && node ./src/services/server.cjs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "express": "^4.18.2",
+    "postcss": "^8.4.27",
+    "postcss-import": "^15.1.0",
+    "postcss-nested-import": "^1.0.0",
+    "postcss-nesting": "^12.0.0",
+    "postcss-sorting": "^8.0.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@types/node": "^20.4.6",
+    "handlebars": "^4.7.8",
+    "normalize.css": "^8.0.1",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "engines": {
+    "node": "18.16.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

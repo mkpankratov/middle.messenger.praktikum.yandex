@@ -1,0 +1,77 @@
+& .list {
+  background: var(--chat-bkg-gray);
+  border-right: 1px solid var(--border-gray);
+  width: 19.55rem;
+  padding: 1.25rem 0.3125rem 0;
+  display: flex;
+  flex-direction: column;
+
+  & .nav {
+    padding: 0 0.625rem;
+
+    & .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      & .item {
+        flex-grow: 0;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        color: var(--font-muted);
+        font-size: 0.75rem;
+        width: max-content;
+
+        &:hover {
+          color: var(--hover-red);
+        }
+      }
+    }
+  }
+
+  & .search {
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid var(--border-gray);
+    position: relative;
+
+    & .input {
+      width: 100%;
+      background: var(--bkg-gray);
+      border: none;
+      border-radius: 0.3125rem;
+      font-size: 0.75rem;
+      height: 2rem;
+      padding-left: 2rem;
+
+      &+.placeholder {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--font-muted);
+        font-size: 0.75rem;
+        pointer-events: none;
+
+        & .text {
+          padding-left: 0.5ch;
+        }
+      }
+
+      &:focus+.placeholder,
+      &:not(:placeholder-shown)+.placeholder {
+        justify-content: flex-start;
+        padding-left: 0.625rem;
+
+        & .text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @nested-import './src/components/chat/components/list/item/styles.css';
+}

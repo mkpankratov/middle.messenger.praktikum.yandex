@@ -1,0 +1,6 @@
+@import '@styles/global.css';
+@import '@styles/icons.css';
+@import '@components/form/styles.css';
+@import '@components/error/styles.css';
+@import '@components/chat/styles.css';
+@import '@components/profile/styles.css';
