@@ -1,0 +1,7 @@
+.chat {
+  height: 100%;
+  display: flex;
+
+  @nested-import './src/components/chat/components/list/styles.css';
+  @nested-import './src/components/chat/components/feed/styles.css';
+}

@@ -1,0 +1,69 @@
+@import 'normalize.css';
+
+@font-face {
+  font-family: 'SF Pro';
+  font-style: normal;
+  font-weight: 350;
+  src: url('@fonts/SF-Pro.ttf') format('truetype');
+}
+
+:root {
+  --font-color: #1d1d1f;
+  --font-muted: #999999;
+  --bkg-gray: #EFEFEF;
+  --bkg-blue: #E4EDFD;
+  --blue: #3369F3;
+  --hover-red: #EE397A;
+  --blue-darken: #2554CD;
+  --link-hover: black;
+  --border-gray: #EAEAEA;
+  --error: #FF2F2F;
+  --chat-bkg-gray: #F8F8F8;
+  --chat-bkg-blue: #E4EDFD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.1em;
+  font-variation-settings: 'wght' 450;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+
+  &:hover {
+    color: var(--hover-red);
+  }
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+#root {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}

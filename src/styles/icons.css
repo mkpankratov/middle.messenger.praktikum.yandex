@@ -1,0 +1,36 @@
+.icon {
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.magnifier {
+    background-image: url('/src/icons/magnifier.svg');
+    background-position-y: 60%;
+  }
+
+  &.actions {
+    background-image: url('/src/icons/actions.svg');
+
+    &:hover {
+      background-image: url('/src/icons/actions_hover.svg');
+    }
+  }
+
+  &.read {
+    background-image: url('/src/icons/read.svg');
+  }
+
+  &.attach {
+    background-image: url('/src/icons/attach_file.svg');
+
+    &:hover {
+      background-image: url('/src/icons/attach_file_hover.svg');
+    }
+  }
+
+  &.arrow-right {
+    background-image: url('/src/icons/arrow_right.svg');
+  }
+
+}
