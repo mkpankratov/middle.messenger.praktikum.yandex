@@ -28,6 +28,7 @@ export default defineConfig({
         login: resolve(root, 'src/pages/login/index.html'),
         register: resolve(root, 'src/pages/register/index.html'),
         profile: resolve(root, 'src/pages/profile/index.html'),
+        edit: resolve(root, 'src/pages/profile/edit/index.html'),
       },
     },
   },

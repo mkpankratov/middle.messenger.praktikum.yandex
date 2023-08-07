@@ -1,9 +1,5 @@
 {{#> page/partial title='Авторизация'}} 
-  {{#> form/partial 
-    header='Вход'
-    linkText='Нет аккаунта?' 
-    linkHref='../register/'
-  }} 
+  {{#> form/partial header='Вход' className='login'}} 
 
     {{> form/components/fieldset 
       name='login' 
@@ -21,6 +17,7 @@
     }}
 
     {{> form/components/submit text='Войти'}} 
+    {{> form/components/link linkText='Нет аккаунта?' linkHref='../register/'}}
   {{/ form/partial}} 
 
 {{/page/partial}}

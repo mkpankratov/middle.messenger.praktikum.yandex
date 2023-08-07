@@ -7,8 +7,8 @@
     </div>
     <div class='container'>
         <div>
-            <img class='display-avatar' src='{{displayAvatar}}'/>
-            <h1 class='display-name'>{{displayName}}</h1>
+            {{#if displayAvatar}}<img class='display-avatar' src='{{displayAvatar}}'/>{{/if}}
+            {{#if displayName}}<h1 class='display-name'>{{displayName}}</h1>{{/if}}
             {{> @partial-block}}
         </div>
     </div>

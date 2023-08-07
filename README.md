@@ -1,5 +1,7 @@
+Мессенджер — это личный проект для первой части обучения курса Middle Front End Яндекс Практикума. Написан на vanilla js со сборкой на Vite. Для раздачи статики есть Express или Netlify. 
 
-### Запуск проекта
+
+### Установка
 ```
 //локальный дев сервер на Vite
 npm run dev
@@ -19,3 +21,4 @@ npm run start
 1. Страница 5** [Фигма](https://www.figma.com/file/hlfNnkWI5MQKl2S68cW19f/msg?type=design&node-id=1%3A679&mode=design&t=Sydz6P14fpzl64dX-1) [Нетлифай](https://deploy--magnificent-bunny-1cd7ad.netlify.app/src/pages/5xx/)
 1. Список чатов и лента переписки [Фигма](https://www.figma.com/file/hlfNnkWI5MQKl2S68cW19f/msg?type=design&node-id=42%3A37&mode=design&t=Sydz6P14fpzl64dX-1) [Нетлифай](https://deploy--magnificent-bunny-1cd7ad.netlify.app/src/pages/chat/)
 1. Настройки пользователя [Фигма](https://www.figma.com/file/hlfNnkWI5MQKl2S68cW19f/msg?type=design&node-id=84%3A210&mode=design&t=Sydz6P14fpzl64dX-1) [Нетлифай](https://deploy--magnificent-bunny-1cd7ad.netlify.app/src/pages/profile/)
+1. Редактировать профиль [Фигма](https://www.figma.com/file/hlfNnkWI5MQKl2S68cW19f/msg?type=design&node-id=107%3A2&mode=design&t=RrOOTGs8NS3TZpgd-1) [Нетлифай](https://deploy--magnificent-bunny-1cd7ad.netlify.app/src/pages/profile/edit/)
