@@ -1,0 +1,13 @@
+{{#> page/partial title='Регистрация'}}
+  {{#> form/partial header='Регистрация' className='register'}}
+    {{> form/components/fieldset name='first_name' type='text' label='Имя' value='Иван'}}
+    {{> form/components/fieldset name='second_name' type='text' label='Фамилия' value='Иванов'}}
+    {{> form/components/fieldset name='email' type='text' label='Почта' value='pochta@yandex.ru'}}
+    {{> form/components/fieldset name='phone' type='text' label='Телефон' value='+7 (909) 967 30 30'}}
+    {{> form/components/fieldset name='login' type='text' label='Логин' value='ivanivanov'}}
+    {{> form/components/fieldset name='password' type='password' label='Пароль' value='••••••••••••' error='Логин и пароль
+  не совпадают'}}
+    {{> form/components/submit text='Зарегистрироваться'}}
+    {{> form/components/link linkText='Войти' linkHref='../login/'}}
+  {{/ form/partial}}
+{{/ page/partial}}

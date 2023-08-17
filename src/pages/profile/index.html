@@ -1,0 +1,12 @@
+{{#> page/partial title='Профиль'}}
+  {{#> profile/partial displayName='Иван' displayAvatar='/src/images/display-avatar.png'}}
+    {{> profile/components/readonly label='Имя в чате' text='Мистер Фантастик'}}
+    {{> profile/components/readonly label='Имя' text='Константин'}}
+    {{> profile/components/readonly label='Фамилия' text='Богословский'}}
+    {{> profile/components/readonly label='Логин' text='ivanivanov'}}
+    {{> profile/components/readonly label='Почта' text='pochta@yandex.ru'}}
+    {{> profile/components/readonly label='Телефон' text='+7 (909) 967 30 30'}}
+  {{> profile/components/linkButton linkHref='/src/pages/profile/edit/' linkText='Редактировать профиль'}}
+  {{> profile/components/linkButton linkHref='' linkText='Выйти' danger=true}}
+  {{/ profile/partial}}
+{{/ page/partial}}

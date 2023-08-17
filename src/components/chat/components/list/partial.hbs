@@ -1,0 +1,20 @@
+  <div class='list'>
+    <nav class='nav'>
+      <div class='actions'>
+        <a class='item'>Новый чат</a>
+        <a class='item' href='/src/pages/profile/'>Профиль</a>
+      </div>
+      <div class='search'>
+        <input class='input' type='text' placeholder=' ' />
+        <div class='placeholder'>
+          <span class='icon magnifier'></span>
+          <span class='text'>Поиск</span>
+        </div>
+      </div>
+    </nav>
+    <div class='inbox'>
+      {{#each inbox}}
+        {{> chat/components/list/item/partial data=this}}
+      {{/each}}
+    </div>
+  </div>
