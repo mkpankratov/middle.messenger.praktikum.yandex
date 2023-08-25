@@ -16,7 +16,6 @@
 
       & .item {
         flex-grow: 0;
-        width: 100%;
         cursor: pointer;
         user-select: none;
         color: var(--font-muted);
@@ -73,5 +72,6 @@
     }
   }
 
-  @nested-import './src/components/chat/components/list/item/styles.css';
+  @nested-import "./src/components/chat/components/list/components/listItem/styles.css";
+
 }

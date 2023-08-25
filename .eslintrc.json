@@ -1,0 +1,57 @@
+
+
+{
+  "plugins": ["@typescript-eslint/eslint-plugin", "simple-import-sort", "unused-imports", "prettier"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "@typescript-eslint/no-shadow": ["warn"],
+    "@typescript-eslint/consistent-type-imports": ["warn"],
+    "@typescript-eslint/no-this-alias": ["off"],
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "no-shadow": "off",
+    "no-useless-escape": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "unused-imports/no-unused-imports-ts": 2,
+    "no-template-curly-in-string": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [["^\\u0000"], ["^@?\\w"], ["^@[A-Z]?\\w"], ["^[A-Z].*"], ["^\\."]]
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["block", "block-like", "cjs-export", "class", "const", "export", "import", "let", "var"]
+      },
+      {
+        "blankLine": "always",
+        "prev": ["block", "block-like", "cjs-export", "class", "const", "export", "import", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["singleline-const", "singleline-let", "singleline-var"],
+        "next": ["singleline-const", "singleline-let", "singleline-var"]
+      },
+      { "blankLine": "any", "prev": ["export", "import"], "next": ["export", "import"] }
+    ]
+  },
+  "extends":  [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended" 
+  ],
+  
+  "parserOptions": {
+    "tsconfigRootDir": ".",
+    "parser": "@typescript-eslint/parser",
+    "project": ["./tsconfig.json"],
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "ignorePatterns": ["/dist", "**/*.min.js","/node_modules"]
+} 

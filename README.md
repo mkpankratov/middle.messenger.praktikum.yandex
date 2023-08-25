@@ -1,4 +1,4 @@
-Мессенджер — это личный проект для первой части обучения курса Middle Front End Яндекс Практикума. Написан на vanilla js со сборкой на Vite. Для раздачи статики есть Express или Netlify. 
+Мессенджер — это личный проект для первой части обучения курса Middle Front End Яндекс Практикума. Написан на vanilla js со сборкой на Vite. Для раздачи статики есть Express или Netlify. Страницы генерируются на стороне клиента при помощи Handlebars.
 
 
 ### Установка
@@ -11,8 +11,16 @@ npm run build
 
 //локальный сервер на Express
 npm run start
+
+//Линтеры
+npm run lint
 ```
 
+### Линтеры
+Команда `npm run lint` запускает настроенные линтеры ESLint, Stylelint и проверку типов Typescript. Вместо .editorconfig используется Prettier плагин для ESLint.
+
+> [!WARNING]
+> До конца 3 спринта ссылки на нетлифай не будут работать. Прошу пользоваться [ссылкой на главную](https://deploy--magnificent-bunny-1cd7ad.netlify.app) со списком всех страниц. Во втором спринте приложение перешло на формат SPA, при этом обработка URL в реализации пока не предусмотрена. Ссылки на фигму рабоатют. 
 
 ### Ссылки
 1. Авторизация [Фигма](https://www.figma.com/file/hlfNnkWI5MQKl2S68cW19f/msg?type=design&node-id=1%3A663&mode=design&t=Sydz6P14fpzl64dX-1) [Нетлифай](https://deploy--magnificent-bunny-1cd7ad.netlify.app/src/pages/login/)

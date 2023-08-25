@@ -7,6 +7,6 @@ app.use(express.static('./dist/'));
 
 app.listen(PORT, function () {
   console.log(` `);
-  console.log(`Запустили Express на  http://localhost:${PORT}/src/pages/`);
+  console.log(`Запустили Express на  http://localhost:${PORT}`);
   console.log(` `);
 });

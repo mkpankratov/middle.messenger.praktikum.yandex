@@ -1,0 +1,15 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "printWidth": 110,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "**/*.{hbs}",
+      "options": {
+        "parser": "glimmer"
+      }
+    }
+  ]
+}
