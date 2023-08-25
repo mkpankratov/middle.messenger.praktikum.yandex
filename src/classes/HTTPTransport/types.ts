@@ -8,3 +8,5 @@ export type TOptions = {
 type TStringObject = {
   [key: string]: string;
 };
+
+export type THttpMethod = (url: string, options?: TOptions) => Promise<unknown>;

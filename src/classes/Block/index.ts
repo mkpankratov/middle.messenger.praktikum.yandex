@@ -101,6 +101,8 @@ export abstract class Block {
   };
 
   private _render() {
+    this.removeEvents();
+
     const fragment = this.render();
     const new_element = fragment.firstElementChild as HTMLElement;
 
@@ -139,6 +141,20 @@ export abstract class Block {
       const fn = events[eventName];
 
       this._element?.addEventListener(eventName, fn);
+    });
+  }
+
+  private removeEvents() {
+    const { events } = this.props;
+
+    if (!events) {
+      return;
+    }
+
+    Object.keys(events).forEach(eventName => {
+      const fn = events[eventName];
+
+      this._element?.removeEventListener(eventName, fn);
     });
   }
 

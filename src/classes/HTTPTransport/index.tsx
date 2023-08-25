@@ -1,9 +1,9 @@
 import { METHODLIST } from '@classes/HTTPTransport/constants';
 import { queryStringify } from '@classes/HTTPTransport/helpers/queryStringify';
-import type { TOptions } from '@classes/HTTPTransport/types';
+import type { THttpMethod, TOptions } from '@classes/HTTPTransport/types';
 
 export class HTTPTransport {
-  get = (url: string, options: TOptions = {}) => {
+  get: THttpMethod = (url: string, options: TOptions = {}) => {
     return this.request(
       url + queryStringify(options.data),
       { ...options, method: METHODLIST.GET },
@@ -11,13 +11,13 @@ export class HTTPTransport {
     );
   };
 
-  put = (url: string, options: TOptions = {}) => {
+  put: THttpMethod = (url, options = {}) => {
     return this.request(url, { ...options, method: METHODLIST.PUT }, options.timeout);
   };
-  post = (url: string, options: TOptions = {}) => {
+  post: THttpMethod = (url, options = {}) => {
     return this.request(url, { ...options, method: METHODLIST.POST }, options.timeout);
   };
-  delete = (url: string, options: TOptions = {}) => {
+  delete: THttpMethod = (url, options = {}) => {
     return this.request(url, { ...options, method: METHODLIST.DELETE }, options.timeout);
   };
 

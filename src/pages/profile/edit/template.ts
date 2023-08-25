@@ -13,6 +13,7 @@ export default `
           <div class='block'>
             <h1 class='header'>Редактировать профиль</h1>
 
+            {{{Fieldset name='display_name' type='text' label='Имя в чате' placeholder='Мистер_Фантастик' validate='latinOrCyrillic, notEmpty'}}}
             {{{Fieldset name='first_name' type='text' label='Имя' placeholder='Иван' validate='latinOrCyrillic, capitalCase, noSpaceOrNumbers, noSpecialChars'}}}
             {{{Fieldset name='second_name' type='text' label='Фамилия' placeholder='Иванов' validate='latinOrCyrillic, capitalCase, noSpaceOrNumbers, noSpecialChars'}}}
             {{{Fieldset name='email' type='text' label='Почта' placeholder='pochta@yandex.ru' validate = 'emailLike'}}}
