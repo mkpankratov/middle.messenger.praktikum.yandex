@@ -30,7 +30,7 @@
       text-align: center;
     }
 
-    & .link {
+    & .navlink {
       text-align: center;
       text-decoration: none;
       color: var(--blue);

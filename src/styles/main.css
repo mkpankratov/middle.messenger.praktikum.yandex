@@ -1,7 +1,8 @@
 @import '@styles/global.css';
 @import '@styles/icons.css';
 @import '@components/form/styles.css';
-@import '@components/form/edit-profile.css';
 @import '@components/error/styles.css';
 @import '@components/chat/styles.css';
 @import '@components/profile/styles.css';
+@import '@pages/profile/edit/styles.css';
+@import '@pages/home/styles.css';

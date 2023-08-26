@@ -5,35 +5,47 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "esModuleInterop":true,
     "baseUrl": "./src",
     "paths": {
-      "@root/*": ["./*"],
-      "@fonts/*": ["./fonts/*"],
-      "@helpers/*": ["./helpers/*"],
-      "@styles/*": ["./styles/*"],
+      "@classes/*": ["./classes/*"],
       "@components/*": ["./components/*"],
-      "@interfaces/*": ["./interfaces/*"],
-      "@mocks/*": ["./mocks/*"],
+      "@fonts/*": ["./fonts/*"],
       "@icons/*": ["./icons/*"],
+      "@images/*": ["./images/*"],
+      "@types/*": ["./types/*"],
+      "@mocks/*": ["./mocks/*"],
+      "@pages/*": ["./pages/*"],
       "@services/*": ["./services/*"],
+      "@styles/*": ["./styles/*"],
+      "@utils/*": ["./utils/*"]
     },
 
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
 
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strictNullChecks": true
   },
-  "include": ["src", "src/interfaces/vite-env.d.ts", "src/interfaces/index.ts", "server.cjs",],
+
   "exclude": [
     "node_modules",
-    "dist",
+    "dist"
   ],
+  
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }
+
+
+

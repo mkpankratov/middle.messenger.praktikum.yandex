@@ -1,0 +1,21 @@
+.nav-page {
+  .header {
+    padding-top: 5.25rem;
+    padding-bottom: 5rem;
+    margin: 0 7rem;
+    color: var(--font-color);
+    font-variation-settings: 'wght' 590;
+  }
+
+  .nav {
+    margin-left: 7rem;
+
+    & .list {
+      padding-inline-start: 1.2rem;
+
+      & li {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}
