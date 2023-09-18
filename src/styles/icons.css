@@ -21,6 +21,10 @@
     background-image: url('/src/icons/read.svg');
   }
 
+  &.unread {
+    background-image: url('/src/icons/unread.svg');
+  }
+
   &.attach {
     background-image: url('/src/icons/attach_file.svg');
 
@@ -31,6 +35,28 @@
 
   &.arrow-right {
     background-image: url('/src/icons/arrow_right.svg');
+  }
+
+  &.caret-left {
+    background-image: url('/src/icons/caret_left.svg');
+
+    &:hover {
+      background-image: url('/src/icons/caret_left_hover.svg');
+    }
+  }
+
+  &.caret-right {
+    background-image: url('/src/icons/caret_right.svg');
+
+    &:hover {
+      background-image: url('/src/icons/caret_right_hover.svg');
+    }
+  }
+
+
+
+  &.remove {
+    background-image: url('/src/icons/remove.svg');
   }
 
 }

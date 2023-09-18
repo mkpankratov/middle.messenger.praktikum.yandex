@@ -3,7 +3,7 @@ export default `
     <div class='block'>
       <h1 class='header'>{{header}}</h1>
       <span class='text'>{{text}}</span>
-      {{{NavLink text='Назад к чатам' route='ChatPage'}}}
+      {{{NavLink text='Назад к чатам' to='/messenger'}}}
     </div>
   </div>
 `;

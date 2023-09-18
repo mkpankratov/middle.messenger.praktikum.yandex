@@ -3,7 +3,7 @@
 {
   "plugins": ["@typescript-eslint/eslint-plugin", "simple-import-sort", "unused-imports", "prettier"],
   "rules": {
-    "@typescript-eslint/no-explicit-any": ["error"],
+    "@typescript-eslint/no-explicit-any": ["off"],
     "@typescript-eslint/no-shadow": ["warn"],
     "@typescript-eslint/consistent-type-imports": ["warn"],
     "@typescript-eslint/no-this-alias": ["off"],

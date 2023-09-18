@@ -1,0 +1,116 @@
+.form.edit-profile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  & .block {
+    min-height: 28.125rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+
+    & .header {
+      margin-top: 5.25rem;
+      margin-bottom: 7rem;
+      color: var(--font-color);
+      font-variation-settings: 'wght' 590;
+      text-align: center;
+    }
+
+    & .fieldset {
+      margin-bottom: 0;
+      width: 31.875rem;
+      align-items: center;
+
+      border-bottom-width: 1px;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+
+      position: relative;
+
+      & label {
+        display: block;
+        position: absolute;
+        top: .65rem;
+        left: 0;
+        font-variation-settings: 'wght' 510;
+      }
+
+      & .input {
+        padding: 0.625rem 0;
+        border: none;
+        border-bottom: 1px solid var(--blue);
+        display: block;
+        min-width: 100%;
+        font-size: 0.8125rem;
+        width: max-content;
+        color: var(--font-color);
+        text-align: right;
+      }
+
+      & .error-message {
+        display: block;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 0.75rem;
+        padding-top: 0.6rem;
+        color: var(--error);
+        margin-bottom: .5rem;
+      }
+
+      &:last-of-type {
+        margin: 0 0 3.1875rem 0;
+        border: none
+      }
+
+      &.error {
+        margin-bottom: 2.4rem;
+
+        &:last-of-type {
+          margin: 0 0 5.5rem 0;
+        }
+      }
+    }
+
+
+
+    & .submit {
+      font-size: 1rem;
+      font-variation-settings: 'wght' 590;
+      color: white;
+      background-color: var(--blue);
+      min-height: 2.5rem;
+      border: none;
+      border-radius: 0.3rem;
+      margin-top: 2rem;
+      margin-bottom: 1.1rem;
+
+      &:hover {
+        background-color: var(--blue-darken);
+      }
+    }
+
+    & .link {
+      padding: 0.625rem 0;
+      text-decoration: none;
+      color: var(--blue);
+      border: 0 solid var(--blue);
+      border-bottom-width: 1px;
+      text-align: left;
+
+      &.danger {
+        color: var(--error);
+      }
+
+      &:hover {
+        color: var(--hover-red);
+      }
+
+      &:last-child {
+        border: none
+      }
+    }
+  }
+}

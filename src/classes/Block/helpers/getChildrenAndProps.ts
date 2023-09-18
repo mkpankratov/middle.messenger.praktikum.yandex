@@ -1,9 +1,11 @@
 import { Block } from '@classes/Block';
-import type { TProps, TPropsWithChildren } from '@classes/Block/types';
+import type { TStringObject } from '@classes/Block/types';
 
-export const getChildrenAndProps = (propsWithChildren: TPropsWithChildren) => {
-  const props: TProps = {};
-  const children: Record<string, Block> = {};
+export const getChildrenAndProps = <P extends TStringObject>(propsWithChildren: P) => {
+  if (!propsWithChildren) return { props: {} as P, children: {} as P };
+
+  const props: Record<string, unknown> = {};
+  const children: Record<string, Block | Block[]> = {};
 
   Object.entries(propsWithChildren).forEach(([key, value]) => {
     if (value instanceof Block) {
@@ -13,5 +15,5 @@ export const getChildrenAndProps = (propsWithChildren: TPropsWithChildren) => {
     }
   });
 
-  return { props, children };
+  return { props: props as P, children };
 };

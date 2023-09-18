@@ -1,6 +1,6 @@
 export default `
-<div class='chat'>
-  {{{List data=this}}}
-  {{{Feed data=this}}}
-</div>
+  <div class='chat'>
+    {{{List}}}
+    {{{ViewChat}}}     
+  </div>
 `;

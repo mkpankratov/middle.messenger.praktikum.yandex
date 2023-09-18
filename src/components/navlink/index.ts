@@ -1,22 +1,27 @@
 import { Block } from '@classes/Block';
-import type { TProps } from '@classes/Block/types';
 import templateString from '@components/navlink/template';
-import { routeTo } from '@utils/route';
+import type { TNavLinkBaseProps } from '@components/navlink/types';
+import { withRouter } from '@hocs/withRouter';
 
-export class NavLink extends Block {
+export class NavLinkBase extends Block<TNavLinkBaseProps> {
   static template = this.hbsCompile(templateString);
-  constructor(props: TProps) {
+  constructor(props: TNavLinkBaseProps) {
     super({
       ...props,
       events: {
         click: (e: MouseEvent) => {
           e.preventDefault();
-          routeTo(this.props.route);
+          this.navigate();
         },
       },
     });
   }
+  navigate() {
+    this.props.router.go(this.props.to);
+  }
   render() {
-    return this.compile(NavLink.template, this.props);
+    return this.compile(NavLinkBase.template, this.props);
   }
 }
+
+export const NavLink = withRouter(NavLinkBase);

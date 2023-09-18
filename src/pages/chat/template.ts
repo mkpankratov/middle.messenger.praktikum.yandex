@@ -1,5 +1,5 @@
 export default `
   {{#Page title='Чаты'}} 
-    {{{Chat inbox=inbox}}} 
+    {{{Chat}}} 
   {{/Page}}
 `;

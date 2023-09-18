@@ -1,12 +1,8 @@
+import type { EMethodList } from '@classes/HTTPTransport/constants';
+
 export type TOptions = {
-  timeout?: number;
-  headers?: TStringObject;
-  method?: string;
-  data?: TStringObject;
+  method: EMethodList;
+  data?: any;
 };
 
-type TStringObject = {
-  [key: string]: string;
-};
-
-export type THttpMethod = (url: string, options?: TOptions) => Promise<unknown>;
+export type THttpMethod<T extends TOptions, K = unknown> = (url: string, options?: T) => Promise<K>;

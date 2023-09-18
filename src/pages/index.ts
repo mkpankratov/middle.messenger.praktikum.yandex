@@ -4,7 +4,9 @@ import { ChatPage } from '@pages/chat';
 import { Home } from '@pages/home';
 import { LoginPage } from '@pages/login';
 import { ProfilePage } from '@pages/profile';
+import { EditAvatarPage } from '@pages/profile/avatar/';
 import { EditProfilePage } from '@pages/profile/edit/';
+import { EditPasswordPage } from '@pages/profile/password/';
 import { RegisterPage } from '@pages/register';
 
 export const pageList = {
@@ -15,5 +17,7 @@ export const pageList = {
   LoginPage,
   ProfilePage,
   EditProfilePage,
+  EditAvatarPage,
+  EditPasswordPage,
   RegisterPage,
 };
