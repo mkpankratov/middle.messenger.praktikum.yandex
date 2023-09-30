@@ -1,12 +1,11 @@
 import type { Block } from '@classes/Block';
 import type { TInbox, TMessageList } from '@mocks/types';
-import type { TPageName } from '@utils/route/types';
 import type { TValidateEvent } from '@utils/validate/types';
 
-export type TBlock = Block;
+export type TBlock<P extends Record<string, any>> = Block<P>;
 
-export type TBlockConstructable = {
-  new (props: TProps): Block;
+export type TBlockConstructable<P extends Record<string, any> = any> = {
+  new (props: P): Block<P>;
 };
 
 export type TMeta = {
@@ -20,7 +19,6 @@ export type TPropValue =
   | TSubmitEvents
   | TMouseEvents
   | undefined
-  | TPageName
   | string[]
   | (() => void)
   | Record<string, Block>
@@ -28,11 +26,10 @@ export type TPropValue =
   | TInbox[]
   | TMessageList[];
 
-export type TProps = {
+export type TProps<T = unknown> = T & {
   [key: string]: TPropValue;
   events?: TEvents;
   title?: string;
-  route?: TPageName;
   validate?: string;
   validateRules?: string[];
   errorMessage?: Block;
@@ -57,10 +54,6 @@ type TMouseEvents = {
 
 export type TComponentDidUpdate = (oldProps?: TProps, newProps?: TProps) => boolean;
 
-export type TPropsWithChildren = {
-  [key: string]: Block | TPropValue;
-};
-
 export type TContextAndStubs = TProps & {
   __refs?: TRefs;
   __children?: TChildren[];
@@ -71,6 +64,10 @@ export type TChildren = {
   embed: (arg: DocumentFragment) => void;
 };
 
-type TRefs = {
+export type TRefs = {
   [key: string]: Block;
+};
+
+export type TStringObject = {
+  [key: string]: any;
 };

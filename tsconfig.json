@@ -8,9 +8,12 @@
     "esModuleInterop":true,
     "baseUrl": "./src",
     "paths": {
+      "@api/*": ["./api/*"],
       "@classes/*": ["./classes/*"],
       "@components/*": ["./components/*"],
+      "@controllers/*": ["./controllers/*"],
       "@fonts/*": ["./fonts/*"],
+      "@hocs/*": ["./hocs/*"],
       "@icons/*": ["./icons/*"],
       "@images/*": ["./images/*"],
       "@types/*": ["./types/*"],

@@ -1,13 +1,25 @@
 import { Block } from '@classes/Block';
+import { withStore } from '@classes/Store';
 import templateString from '@components/chat/components/list/template';
-import { inbox } from '@mocks/chat';
+import { chatViewController } from '@controllers/ChatViewController';
 
-export class List extends Block {
+export class ListBase extends Block {
   static template = this.hbsCompile(templateString);
-  constructor() {
-    super({ inbox });
-  }
+
   render() {
-    return this.compile(List.template, this.props);
+    this.props.showCreateSingle = chatViewController.showCreateSingle;
+    this.props.showCreateMultiple = chatViewController.showCreateMultiple;
+
+    return this.compile(ListBase.template, this.props);
   }
 }
+
+const withChatList = withStore(state => {
+  return {
+    chatList: [...(state.chatList || [])],
+    selectedChat: state.selectedChat || undefined,
+    myLogin: state.user.login,
+  };
+});
+
+export const List = withChatList(ListBase);

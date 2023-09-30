@@ -1,6 +1,7 @@
 import { Block } from '@classes/Block';
 import type { TProps } from '@classes/Block/types';
 import templateString from '@components/form/template';
+import type { TValue } from '@components/form/types';
 
 export class Form extends Block {
   static template = this.hbsCompile(templateString);
@@ -47,19 +48,20 @@ export class Form extends Block {
 
     const hasValidationError = this.hasValidationError(this.element);
 
-    if (!hasValidationError && this.element.parentElement) {
-      const form: HTMLFormElement | null = this.element.parentElement.querySelector('form');
-      const data = form && new FormData(form);
-
-      if (!data) {
-        return;
-      }
-
-      const value = Object.fromEntries(data.entries());
-
-      /* eslint no-console: 0 */
-      console.log(value);
+    if (hasValidationError || !this.element.parentElement) {
+      return;
     }
+
+    const form: HTMLFormElement | null = this.element.parentElement.querySelector('form');
+    const data = form && new FormData(form);
+
+    if (!data) {
+      return;
+    }
+
+    const value: TValue = Object.fromEntries(data.entries());
+
+    this.props.submitHandler(value, form);
   }
 
   render() {

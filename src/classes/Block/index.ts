@@ -1,42 +1,37 @@
 import { EVENTS } from '@classes/Block/constants';
 import { getChildrenAndProps } from '@classes/Block/helpers/getChildrenAndProps';
 import { makeId } from '@classes/Block/helpers/makeId';
-import type {
-  TChildren,
-  TComponentDidUpdate,
-  TContextAndStubs,
-  TProps,
-  TPropsWithChildren,
-} from '@classes/Block/types';
+import type { TChildren, TComponentDidUpdate, TRefs } from '@classes/Block/types';
 import { EventBus } from '@classes/EventBus';
+import { isEqual } from '@utils/isEqual';
 import Handlebars from 'handlebars';
 
-export abstract class Block {
+export abstract class Block<P extends Record<string, any> = any> {
   static hbsCompile = Handlebars.compile;
   static EVENTS = EVENTS;
   public id = makeId(6);
-  protected props: TProps;
-  protected refs: Record<string, Block> = {};
-  public children: Record<string, Block>;
-  private eventBus: () => EventBus;
+  protected props: P;
+  protected refs: TRefs = {};
+  public children: Record<string, Block | Block[]>;
+  private eventBus: () => EventBus<P>;
   private _element: HTMLElement | null = null;
-  private getChildrenAndProps = getChildrenAndProps;
+  private getChildrenAndProps = getChildrenAndProps<P>;
   protected tagName: string = 'div';
 
-  constructor(propsWithChildren: TPropsWithChildren = {}) {
+  constructor(propsWithChildren: P) {
     const { props, children } = this.getChildrenAndProps(propsWithChildren);
 
     this.children = children;
     this.props = this.makePropsProxy(props);
 
-    const eventBus = new EventBus();
+    const eventBus = new EventBus<P>();
 
     this.eventBus = () => eventBus;
     this.registerEvents(eventBus);
     eventBus.emit(Block.EVENTS.INIT);
   }
 
-  private makePropsProxy = (props: TProps) => {
+  private makePropsProxy = (props: P) => {
     const self = this;
 
     return new Proxy(props, {
@@ -46,10 +41,15 @@ export abstract class Block {
         return typeof value === 'function' ? value.bind(target) : value;
       },
 
-      set(target, prop: string, value: string) {
+      set(target, prop: string, value) {
         const oldTarget = { ...target };
 
-        target[prop] = value;
+        target[prop as keyof P] = value;
+
+        if (isEqual(oldTarget, target)) {
+          return true;
+        }
+
         self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
         return true;
       },
@@ -60,7 +60,7 @@ export abstract class Block {
     });
   };
 
-  private registerEvents(eventBus: EventBus) {
+  private registerEvents(eventBus: EventBus<P>) {
     eventBus.on(Block.EVENTS.INIT, this._init.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
@@ -83,10 +83,16 @@ export abstract class Block {
 
   public dispatchComponentDidMount() {
     this.eventBus().emit(Block.EVENTS.FLOW_CDM);
-    Object.values(this.children).forEach(child => child.dispatchComponentDidMount());
+    Object.values(this.children).forEach(child => {
+      if (Array.isArray(child)) {
+        child.forEach(ch => ch.dispatchComponentDidMount());
+      } else {
+        child.dispatchComponentDidMount();
+      }
+    });
   }
 
-  private _componentDidUpdate(oldProps?: TProps, newProps?: TProps) {
+  private _componentDidUpdate(oldProps?: P, newProps?: P) {
     if (!oldProps || !newProps) {
       return;
     }
@@ -114,8 +120,8 @@ export abstract class Block {
     this.addEvents();
   }
 
-  protected compile(template: (context: TProps) => string, context: TProps) {
-    const contextAndStubs: TContextAndStubs = { ...context, __refs: this.refs };
+  protected compile(template: (context: P) => string, context: P) {
+    const contextAndStubs: P = { ...context, __refs: this.refs };
 
     const html = template(contextAndStubs);
 
@@ -162,7 +168,7 @@ export abstract class Block {
     return new DocumentFragment();
   }
 
-  setProps = (nextProps: TProps) => {
+  setProps = (nextProps: P) => {
     if (!nextProps) {
       return;
     }
@@ -181,10 +187,12 @@ export abstract class Block {
   }
 
   show() {
+    this.addEvents();
     this.getContent()!.style.display = 'block';
   }
 
   hide() {
     this.getContent()!.style.display = 'none';
+    this.removeEvents();
   }
 }

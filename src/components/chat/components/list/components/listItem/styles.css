@@ -9,7 +9,7 @@
     display: none;
   }
 
-  & .item {
+  & .chatListItem {
     display: flex;
     padding: 0.875rem 0;
     border-bottom: 1px solid var(--border-gray);
@@ -19,6 +19,7 @@
     user-select: none;
 
     & .avatar {
+      pointer-events: none;
       width: 3rem;
       height: 3rem;
       background: var(--bkg-gray);
@@ -28,6 +29,7 @@
     }
 
     & .content {
+      pointer-events: none;
       width: 100%;
       color: var(--font-muted);
       z-index: 2;
@@ -48,6 +50,15 @@
           line-height: 1.25em;
           height: 1.875rem;
           max-width: 88%;
+
+          & .my-last-word {
+            color: var(--font-color);
+            font-weight: bold;
+          }
+
+          &.empty {
+            font-style: italic;
+          }
 
           & em {
             color: var(--font-color);
@@ -74,11 +85,13 @@
         &+& {
           margin-top: 0.35rem;
           align-items: flex-end;
+          overflow: hidden;
         }
       }
     }
 
-    & .hover {
+    & .highlight {
+      pointer-events: none;
       position: absolute;
       top: 9%;
       left: -1.5%;
@@ -90,7 +103,7 @@
       display: none;
     }
 
-    &:hover .hover {
+    &.active .highlight {
       display: block;
     }
   }

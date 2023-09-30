@@ -3,5 +3,5 @@
   display: flex;
 
   @nested-import './src/components/chat/components/list/styles.css';
-  @nested-import './src/components/chat/components/feed/styles.css';
+  @nested-import './src/components/chat/components/viewChat/components/feed/styles.css';
 }

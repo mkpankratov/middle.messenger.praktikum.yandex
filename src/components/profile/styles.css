@@ -1,6 +1,7 @@
 .profile {
   height: 100%;
   display: flex;
+
   & .back {
     background: var(--chat-bkg-gray);
     border-right: 1px solid var(--border-gray);
@@ -23,6 +24,7 @@
       border: none;
     }
   }
+
   & .container {
     display: flex;
     justify-content: center;
@@ -32,10 +34,12 @@
     line-height: 1rem;
 
     & .display-avatar {
-      width:8.125rem;
+      width: 8.125rem;
       height: 8.125rem;
+      border-radius: 8.125rem;
       margin: 0 auto 1.5rem auto;
       display: flex;
+
     }
 
     & .display-name {
@@ -57,12 +61,12 @@
       }
 
       &:last-of-type {
-        border:none;
-        margin-bottom:3.1875rem;
+        border: none;
+        margin-bottom: 3.1875rem;
       }
 
       & .text {
-        color:var(--font-muted);
+        color: var(--font-muted);
       }
     }
 
@@ -71,13 +75,18 @@
       width: 31.875rem;
       border-bottom: 1px solid var(--border-gray);
       padding: 0.625rem 0;
+      text-align: left;
+
+      &:active {
+        transform: none;
+      }
 
       &.danger {
         color: var(--error);
       }
 
       &:last-of-type {
-        border:none;
+        border: none;
       }
     }
   }

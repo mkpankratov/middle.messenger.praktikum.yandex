@@ -1,6 +1,6 @@
 export default `
 {{#Page title='Авторизация'}}
-  {{#Form className='login'}}
+  {{#Form className='login' type='login' submitHandler=handleLogin}}
     <div class='block'>
       <h1 class='header'>Вход</h1>
 
@@ -21,7 +21,7 @@ export default `
       }}}
 
       {{{Submit text='Войти'}}}
-      {{{NavLink text='Нет аккаунта?' route='RegisterPage'}}}
+      {{{NavLink text='Нет аккаунта?' to='/sign-up'}}}
     </div>
   {{/Form}}
 {{/Page}}

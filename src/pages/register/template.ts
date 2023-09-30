@@ -1,9 +1,9 @@
 export default `
   {{#Page title='Регистрация'}}
-    {{#Form className='register'}}
+    {{#Form className='register' type='signup' submitHandler=handleRegister}}
       <div class='block'>
         <h1 class='header'>Регистрация</h1>
-        {{{Fieldset ref='display_name' name='display_name' type='text' label='Имя в чате' placeholder='Мистер Фантастик'}}
+        {{{Fieldset ref='display_name' name='display_name' type='text' label='Имя в чате' placeholder='Мистер Фантастик'}}}
         {{{Fieldset ref='first_name' name='first_name' type='text' label='Имя' placeholder='Иван' validate='latinOrCyrillic, capitalCase, noSpaceOrNumbers, noSpecialChars'}}}
         {{{Fieldset ref='second_name' name='second_name' type='text' label='Фамилия' placeholder='Иванов' validate='latinOrCyrillic, capitalCase, noSpaceOrNumbers, noSpecialChars'}}}
         {{{Fieldset ref='email' name='email' type='text' label='Почта' placeholder='pochta@yandex.ru' validate = 'emailLike'}}}
@@ -26,7 +26,7 @@ export default `
           validate = 'eightToForty, capitalAndNumber'
         }}}
         {{{Submit text='Зарегистрироваться'}}}
-        {{{NavLink text='Войти' route='LoginPage'}}}
+        {{{NavLink text='Войти' to='/'}}}
       </div>
     {{/Form}}
   {{/Page}}

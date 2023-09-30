@@ -1,7 +1,5 @@
-import type { TProps } from '@classes/Block/types';
-
-export type IListener = {
-  [key: string]: TFunction[];
+export type IListener<P> = {
+  [key: string]: TFunction<P>[];
 };
 
-export type TFunction = (oldProps?: TProps, newProps?: TProps) => void;
+export type TFunction<P> = (oldProps?: P, newProps?: P) => void;
