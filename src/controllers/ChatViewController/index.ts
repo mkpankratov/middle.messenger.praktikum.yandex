@@ -1,4 +1,4 @@
-import { store } from '@classes/Store';
+import { store } from '../../classes/Store/index.ts';
 
 export class ChatViewController {
   constructor() {

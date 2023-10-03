@@ -1,10 +1,10 @@
-import { Block } from '@classes/Block';
-import { withStore } from '@classes/Store';
-import templateString from '@components/chat/components/viewChat/components/feed/template';
-import type { TFeedProps } from '@components/chat/components/viewChat/components/feed/types';
-import { chatListController } from '@controllers/ChatListController';
-import { chatViewController } from '@controllers/ChatViewController';
-import { messageListController } from '@controllers/MessageListController';
+import { Block } from '../../../../../../classes/Block/index.ts';
+import { withStore } from '../../../../../../classes/Store/index.ts';
+import { chatListController } from '../../../../../../controllers/ChatListController/index.ts';
+import { chatViewController } from '../../../../../../controllers/ChatViewController/index.ts';
+import { messageListController } from '../../../../../../controllers/MessageListController/index.ts';
+import templateString from './template.ts';
+import type { TFeedProps } from './types.ts';
 
 export class FeedBase extends Block<TFeedProps> {
   static template = this.hbsCompile(templateString);

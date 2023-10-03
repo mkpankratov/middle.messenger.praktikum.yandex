@@ -1,8 +1,8 @@
-import { authAPI } from '@api/AuthAPI';
-import type { TAuthAPI, TSigninData, TSignupData } from '@api/AuthAPI/types';
-import { router } from '@classes/Router';
-import { store } from '@classes/Store';
-import { messageListController } from '@controllers/MessageListController/';
+import { authAPI } from '../../api/AuthAPI/index.ts';
+import type { TAuthAPI, TSigninData, TSignupData } from '../../api/AuthAPI/types.ts';
+import { router } from '../../classes/Router/index.ts';
+import { store } from '../../classes/Store/index.ts';
+import { messageListController } from '../MessageListController/index.ts';
 
 export class AuthController {
   private readonly api: TAuthAPI;

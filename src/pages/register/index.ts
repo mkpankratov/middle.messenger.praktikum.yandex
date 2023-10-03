@@ -1,8 +1,8 @@
-import type { TSignupData } from '@api/AuthAPI/types';
-import { Block } from '@classes/Block';
-import { router } from '@classes/Router';
-import { authController } from '@controllers/AuthController';
-import templateString from '@pages/register/template';
+import type { TSignupData } from '../../api/AuthAPI/types.ts';
+import { Block } from '../../classes/Block/index.ts';
+import { router } from '../../classes/Router/index.ts';
+import { authController } from '../../controllers/AuthController/index.ts';
+import templateString from './template.ts';
 
 export class RegisterPage extends Block {
   static template = this.hbsCompile(templateString);

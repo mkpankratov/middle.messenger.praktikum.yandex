@@ -7,22 +7,7 @@
     "skipLibCheck": true,
     "esModuleInterop":true,
     "baseUrl": "./src",
-    "paths": {
-      "@api/*": ["./api/*"],
-      "@classes/*": ["./classes/*"],
-      "@components/*": ["./components/*"],
-      "@controllers/*": ["./controllers/*"],
-      "@fonts/*": ["./fonts/*"],
-      "@hocs/*": ["./hocs/*"],
-      "@icons/*": ["./icons/*"],
-      "@images/*": ["./images/*"],
-      "@types/*": ["./types/*"],
-      "@mocks/*": ["./mocks/*"],
-      "@pages/*": ["./pages/*"],
-      "@services/*": ["./services/*"],
-      "@styles/*": ["./styles/*"],
-      "@utils/*": ["./utils/*"]
-    },
+
 
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

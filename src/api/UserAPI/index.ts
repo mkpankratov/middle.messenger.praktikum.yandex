@@ -1,5 +1,5 @@
-import BaseAPI from '@api/BaseAPI';
-import type { TSeachUser, TUpdatePassword, TUpdateUser } from '@api/UserAPI/types';
+import BaseAPI from '../BaseAPI.ts';
+import type { TSeachUser, TUpdatePassword, TUpdateUser } from '../UserAPI/types.ts';
 
 export class UserAPI extends BaseAPI {
   constructor() {

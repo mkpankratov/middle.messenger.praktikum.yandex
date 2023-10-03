@@ -62,7 +62,7 @@
       background-color: var(--bkg-gray);
     }
 
-    &+& {
+    &+.item {
       margin-top: .2rem;
     }
 

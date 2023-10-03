@@ -1,6 +1,6 @@
-import type { TUser } from '@api/AuthAPI/types';
-import type { ChatsAPI } from '@api/ChatListAPI';
-import type { TOptions } from '@classes/HTTPTransport/types';
+import type { TOptions } from '../../classes/HTTPTransport/types.ts';
+import type { TUser } from '../AuthAPI/types.ts';
+import type { ChatsAPI } from '../ChatListAPI/index.ts';
 
 export type TChatsAPI = ChatsAPI;
 

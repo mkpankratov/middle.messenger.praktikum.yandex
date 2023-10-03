@@ -1,7 +1,7 @@
-import { Block } from '@classes/Block';
-import templateString from '@components/navlink/template';
-import type { TNavLinkBaseProps } from '@components/navlink/types';
-import { withRouter } from '@hocs/withRouter';
+import { Block } from '../../classes/Block/index.ts';
+import { withRouter } from '../../hocs/withRouter/index.ts';
+import templateString from './template.ts';
+import type { TNavLinkBaseProps } from './types.ts';
 
 export class NavLinkBase extends Block<TNavLinkBaseProps> {
   static template = this.hbsCompile(templateString);

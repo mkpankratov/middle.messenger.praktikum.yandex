@@ -53,5 +53,13 @@
     "sourceType": "module",
     "ecmaVersion": 2018
   },
-  "ignorePatterns": ["/dist", "**/*.min.js","/node_modules"]
+  "ignorePatterns": ["/dist", "**/*.min.js","/node_modules"],
+  "overrides": [
+    {
+        "files": ["*.js"],
+        "rules": {
+            "no-undef": "off"
+        }
+    }
+]
 } 

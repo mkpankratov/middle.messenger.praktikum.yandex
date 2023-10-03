@@ -1,4 +1,4 @@
-import type { IListener, TFunction } from '@classes/EventBus/type';
+import type { IListener, TFunction } from './type.ts';
 
 export class EventBus<P = unknown> {
   listeners: IListener<P> = {};

@@ -1,4 +1,4 @@
-import defaultAvatar from '@images/display-avatar.png';
+import defaultAvatar from '../../../../../../../../images/display-avatar.png';
 
 export default `
 <div class='suggest{{#unless hasData}} sempty{{/unless}}'>

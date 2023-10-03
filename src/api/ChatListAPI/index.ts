@@ -1,6 +1,6 @@
-import type { TUser } from '@api/AuthAPI/types';
-import BaseAPI from '@api/BaseAPI';
-import type { TChatInfo, TCreateResponse } from '@api/ChatListAPI/types';
+import type { TUser } from '../AuthAPI/types.ts';
+import BaseAPI from '../BaseAPI.ts';
+import type { TChatInfo, TCreateResponse } from './types.ts';
 
 export class ChatsAPI extends BaseAPI {
   constructor() {

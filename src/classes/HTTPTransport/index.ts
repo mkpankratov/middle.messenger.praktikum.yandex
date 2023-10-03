@@ -1,5 +1,5 @@
-import { EMethodList } from '@classes/HTTPTransport/constants';
-import type { TOptions } from '@classes/HTTPTransport/types';
+import { EMethodList } from './constants.ts';
+import type { TOptions } from './types.ts';
 
 export class HTTPTransport {
   static API_URL = 'https://ya-praktikum.tech/api/v2';

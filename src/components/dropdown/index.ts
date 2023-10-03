@@ -1,6 +1,6 @@
-import { Block } from '@classes/Block';
-import templateString from '@components/dropdown/template';
-import type { TDropdownProps } from '@components/dropdown/types';
+import { Block } from '../../classes/Block/index.ts';
+import templateString from './template.ts';
+import type { TDropdownProps } from './types.ts';
 
 export class Dropdown extends Block<TDropdownProps> {
   static template = this.hbsCompile(templateString);
