@@ -1,7 +1,7 @@
-import type { Block } from '@classes/Block';
-import type { TBlockConstructable } from '@classes/Block/types';
-import type { TRouteProps } from '@classes/Route/types';
-import { renderDOM } from '@utils/renderDOM';
+import { renderDOM } from '../../utils/renderDOM.ts';
+import type { Block } from '../Block/index.ts';
+import type { TBlockConstructable } from '../Block/types.ts';
+import type { TRouteProps } from '../Route/types.ts';
 
 export class Route {
   private block?: Block;

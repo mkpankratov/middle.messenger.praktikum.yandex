@@ -1,6 +1,6 @@
-import avatarUrl from '@images/avatar.png';
-import cameraUrl from '@images/camera.png';
-import type { TInbox, TMessageList } from '@mocks/types';
+import avatarUrl from 'images/avatar.png';
+import cameraUrl from 'images/camera.png';
+import type { TInbox, TMessageList } from 'mocks/types.ts';
 
 export const inbox: TInbox[] = [
   {

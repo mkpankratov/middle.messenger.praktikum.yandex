@@ -1,25 +1,25 @@
-import { Button } from '@components/button';
-import { Chat } from '@components/chat';
-import { List } from '@components/chat/components/list';
-import { ListItem } from '@components/chat/components/list/components/listItem/index';
-import { ViewChat } from '@components/chat/components/viewChat';
-import { CreateChat } from '@components/chat/components/viewChat/components/createChat';
-import { CreateGroupChatButton } from '@components/chat/components/viewChat/components/createChat/components/createGroupChatButton';
-import { SelectedUser } from '@components/chat/components/viewChat/components/createChat/components/selectedUser';
-import { SuggestSingleUser } from '@components/chat/components/viewChat/components/createChat/components/suggestSingleUser';
-import { Feed } from '@components/chat/components/viewChat/components/feed';
-import { FeedItem } from '@components/chat/components/viewChat/components/feed/components/feedItem/index';
-import { RemoveUser } from '@components/chat/components/viewChat/components/removeUser';
-import { Dropdown } from '@components/dropdown';
-import { Error } from '@components/error';
-import { Form } from '@components/form';
-import { ErrorMessage } from '@components/form/components/errorMessage';
-import { Fieldset } from '@components/form/components/fieldset';
-import { Input } from '@components/form/components/input';
-import { Submit } from '@components/form/components/submit';
-import { NavLink } from '@components/navlink';
-import { Page } from '@components/page';
-import { ProfileReadonly } from '@components/profile/components/readonly';
+import { Button } from './button/index.ts';
+import { ListItem } from './chat/components/list/components/listItem/index.ts';
+import { List } from './chat/components/list/index.ts';
+import { CreateGroupChatButton } from './chat/components/viewChat/components/createChat/components/createGroupChatButton/index.ts';
+import { SelectedUser } from './chat/components/viewChat/components/createChat/components/selectedUser/index.ts';
+import { SuggestSingleUser } from './chat/components/viewChat/components/createChat/components/suggestSingleUser/index.ts';
+import { CreateChat } from './chat/components/viewChat/components/createChat/index.ts';
+import { FeedItem } from './chat/components/viewChat/components/feed/components/feedItem/index.ts';
+import { Feed } from './chat/components/viewChat/components/feed/index.ts';
+import { RemoveUser } from './chat/components/viewChat/components/removeUser/index.ts';
+import { ViewChat } from './chat/components/viewChat/index.ts';
+import { Chat } from './chat/index.ts';
+import { Dropdown } from './dropdown/index.ts';
+import { Error } from './error/index.ts';
+import { ErrorMessage } from './form/components/errorMessage/index.ts';
+import { Fieldset } from './form/components/fieldset/index.ts';
+import { Input } from './form/components/input/index.ts';
+import { Submit } from './form/components/submit/index.ts';
+import { Form } from './form/index.ts';
+import { NavLink } from './navlink/index.ts';
+import { Page } from './page/index.ts';
+import { ProfileReadonly } from './profile/components/readonly/index.ts';
 
 export const componentList = {
   Chat,

@@ -1,5 +1,5 @@
-import { Block } from '@classes/Block';
-import templateString from '@pages/404/template';
+import { Block } from '../../classes/Block/index.ts';
+import templateString from './template.ts';
 
 export class Page404 extends Block {
   static template = this.hbsCompile(templateString);

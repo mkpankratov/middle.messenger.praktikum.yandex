@@ -1,9 +1,9 @@
-import { Block } from '@classes/Block';
-import { store, withStore } from '@classes/Store';
-import templateString from '@components/chat/components/viewChat/components/removeUser/template';
-import type { TRemoveUserProps } from '@components/chat/components/viewChat/components/removeUser/types';
-import { chatListController } from '@controllers/ChatListController';
-import { chatViewController } from '@controllers/ChatViewController';
+import { Block } from '../../../../../../classes/Block/index.ts';
+import { store, withStore } from '../../../../../../classes/Store/index.ts';
+import { chatListController } from '../../../../../../controllers/ChatListController/index.ts';
+import { chatViewController } from '../../../../../../controllers/ChatViewController/index.ts';
+import templateString from './template.ts';
+import type { TRemoveUserProps } from './types.ts';
 
 export class RemoveUserBase extends Block<TRemoveUserProps> {
   static template = this.hbsCompile(templateString);

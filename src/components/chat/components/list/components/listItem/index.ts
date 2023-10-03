@@ -1,7 +1,7 @@
-import { Block } from '@classes/Block';
-import templateString from '@components/chat/components/list/components/listItem/template';
-import type { TListItemProps } from '@components/chat/components/list/components/listItem/types';
-import { chatListController } from '@controllers/ChatListController';
+import { Block } from '../../../../../../classes/Block/index.ts';
+import { chatListController } from '../../../../../../controllers/ChatListController/index.ts';
+import templateString from './template.ts';
+import type { TListItemProps } from './types.ts';
 
 export class ListItem extends Block<TListItemProps> {
   static template = this.hbsCompile(templateString);

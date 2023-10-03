@@ -1,5 +1,5 @@
-import type { TSigninData, TSignupData, TUser } from '@api/AuthAPI/types';
-import BaseAPI from '@api/BaseAPI';
+import BaseAPI from '../BaseAPI.ts';
+import type { TSigninData, TSignupData, TUser } from './types.ts';
 
 export class AuthAPI extends BaseAPI {
   constructor() {

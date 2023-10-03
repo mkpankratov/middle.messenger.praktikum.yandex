@@ -1,14 +1,14 @@
-import type { TBlockConstructable } from '@classes/Block/types';
-import { Route } from '@classes/Route';
-import type { TRouteProps } from '@classes/Route/types';
-import { store } from '@classes/Store';
-import { authController } from '@controllers/AuthController';
+import { authController } from '../../controllers/AuthController/index.ts';
+import type { TBlockConstructable } from '../Block/types.ts';
+import { Route } from '../Route/index.ts';
+import type { TRouteProps } from '../Route/types.ts';
+import { store } from '../Store/index.ts';
 
 export class Router {
   public routes: Route[] = [];
-  public history!: History;
+  public history = window.history;
   private currentRoute!: Route | undefined;
-  private instance!: Router;
+  private instance?: Router;
 
   constructor() {
     if (this.instance) {
@@ -16,7 +16,6 @@ export class Router {
     }
 
     this.routes = [];
-    this.history = window.history;
     this.currentRoute = undefined;
 
     this.instance = this;
@@ -105,11 +104,11 @@ export class Router {
   }
 
   public back() {
-    history.back();
+    this.history.back();
   }
 
   public forward() {
-    history.forward();
+    this.history.forward();
   }
 
   public getRoute(pathname: string) {
@@ -120,6 +119,13 @@ export class Router {
     }
 
     return foundRoute;
+  }
+
+  public reset() {
+    this.instance = undefined;
+    this.routes = [];
+    this.currentRoute = undefined;
+    this.instance = this;
   }
 }
 

@@ -1,8 +1,8 @@
-import type { TUser } from '@api/AuthAPI/types';
-import { chatListAPI } from '@api/ChatListAPI';
-import type { TChatInfo, TChatsAPI } from '@api/ChatListAPI/types';
-import { store } from '@classes/Store';
-import { messageListController } from '@controllers/MessageListController/index.ts';
+import type { TUser } from '../../api/AuthAPI/types.ts';
+import { chatListAPI } from '../../api/ChatListAPI/index.ts';
+import type { TChatInfo, TChatsAPI } from '../../api/ChatListAPI/types.ts';
+import { store } from '../../classes/Store/index.ts';
+import { messageListController } from '../../controllers/MessageListController/index.ts';
 
 export class ChatListController {
   private readonly api: TChatsAPI;

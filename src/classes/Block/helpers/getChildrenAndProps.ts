@@ -1,5 +1,5 @@
-import { Block } from '@classes/Block';
-import type { TStringObject } from '@classes/Block/types';
+import { Block } from '../index.ts';
+import type { TStringObject } from '../types.ts';
 
 export const getChildrenAndProps = <P extends TStringObject>(propsWithChildren: P) => {
   if (!propsWithChildren) return { props: {} as P, children: {} as P };

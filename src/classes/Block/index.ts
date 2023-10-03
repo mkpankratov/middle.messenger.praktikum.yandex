@@ -1,10 +1,11 @@
-import { EVENTS } from '@classes/Block/constants';
-import { getChildrenAndProps } from '@classes/Block/helpers/getChildrenAndProps';
-import { makeId } from '@classes/Block/helpers/makeId';
-import type { TChildren, TComponentDidUpdate, TRefs } from '@classes/Block/types';
-import { EventBus } from '@classes/EventBus';
-import { isEqual } from '@utils/isEqual';
 import Handlebars from 'handlebars';
+
+import { isEqual } from '../../utils/isEqual.ts';
+import { EventBus } from '../EventBus/index.ts';
+import { EVENTS } from './constants.ts';
+import { getChildrenAndProps } from './helpers/getChildrenAndProps.ts';
+import { makeId } from './helpers/makeId.ts';
+import type { TChildren, TComponentDidUpdate, TRefs } from './types.ts';
 
 export abstract class Block<P extends Record<string, any> = any> {
   static hbsCompile = Handlebars.compile;

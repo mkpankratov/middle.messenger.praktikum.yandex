@@ -1,11 +1,11 @@
-import type { TUser } from '@api/AuthAPI/types';
-import { Block } from '@classes/Block';
-import { store } from '@classes/Store';
-import templateString from '@components/chat/components/viewChat/components/createChat/template';
-import type { TCreateChatProps } from '@components/chat/components/viewChat/components/createChat/types';
-import { chatListController } from '@controllers/ChatListController';
-import { chatViewController } from '@controllers/ChatViewController';
-import { userController } from '@controllers/UserController';
+import type { TUser } from '../../../../../../api/AuthAPI/types.ts';
+import { Block } from '../../../../../../classes/Block/index.ts';
+import { store } from '../../../../../../classes/Store/index.ts';
+import { chatListController } from '../../../../../../controllers/ChatListController/index.ts';
+import { chatViewController } from '../../../../../../controllers/ChatViewController/index.ts';
+import { userController } from '../../../../../../controllers/UserController/index.ts';
+import templateString from './template.ts';
+import type { TCreateChatProps } from './types.ts';
 
 export class CreateChat extends Block<TCreateChatProps> {
   static template = this.hbsCompile(templateString);

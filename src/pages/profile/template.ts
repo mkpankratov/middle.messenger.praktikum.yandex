@@ -1,4 +1,4 @@
-import displayAvatarUrl from '@images/display-avatar.png';
+import displayAvatarUrl from '../../images/display-avatar.png';
 
 export default `
   {{#Page title='Профиль'}}

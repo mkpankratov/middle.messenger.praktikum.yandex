@@ -1,4 +1,4 @@
-import type { TMessage } from '@controllers/MessageListController/types';
+import type { TMessage } from 'controllers/MessageListController/types.ts';
 
 export type TFeedItemProps = {
   type: 'incoming' | 'outgoing';

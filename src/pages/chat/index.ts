@@ -1,7 +1,7 @@
-import { Block } from '@classes/Block';
-import { chatListController } from '@controllers/ChatListController';
-import templateString from '@pages/chat/template';
-import type { TChatPageProps } from '@pages/chat/types';
+import { Block } from '../../classes/Block/index.ts';
+import { chatListController } from '../../controllers/ChatListController/index.ts';
+import templateString from './template.ts';
+import type { TChatPageProps } from './types.ts';
 
 export class ChatPage extends Block<TChatPageProps> {
   static template = this.hbsCompile(templateString);

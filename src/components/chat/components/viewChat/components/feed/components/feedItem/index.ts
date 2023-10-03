@@ -1,6 +1,6 @@
-import { Block } from '@classes/Block';
-import templateString from '@components/chat/components/viewChat/components/feed/components/feedItem/template';
-import type { TFeedItemProps } from '@components/chat/components/viewChat/components/feed/components/feedItem/types';
+import { Block } from '../../../../../../../../classes/Block/index.ts';
+import templateString from './template.ts';
+import type { TFeedItemProps } from './types.ts';
 
 export class FeedItem extends Block<TFeedItemProps> {
   static template = this.hbsCompile(templateString);

@@ -1,4 +1,4 @@
-import type { UserAPI } from '@api/UserAPI';
+import type { UserAPI } from './index.ts';
 
 export type TUserAPI = UserAPI;
 

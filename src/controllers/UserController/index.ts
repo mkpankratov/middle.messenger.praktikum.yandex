@@ -1,7 +1,7 @@
-import { userAPI } from '@api/UserAPI';
-import type { TUserAPI } from '@api/UserAPI/types';
-import type { TSeachUser, TUpdatePassword, TUpdateUser } from '@api/UserAPI/types';
-import { store } from '@classes/Store';
+import { userAPI } from '../../api/UserAPI/index.ts';
+import type { TUserAPI } from '../../api/UserAPI/types.ts';
+import type { TSeachUser, TUpdatePassword, TUpdateUser } from '../../api/UserAPI/types.ts';
+import { store } from '../../classes/Store/index.ts';
 
 export class UserController {
   private readonly api: TUserAPI;

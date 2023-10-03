@@ -1,5 +1,5 @@
-import type { TComponentList } from '@classes/ComponentRegister/types';
-import { register } from '@classes/ComponentRegister/utils/register';
+import type { TComponentList } from './types.ts';
+import { register } from './utils/register.ts';
 
 export class ComponentRegister {
   private register = register;

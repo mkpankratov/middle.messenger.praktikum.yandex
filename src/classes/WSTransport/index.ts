@@ -1,5 +1,5 @@
-import { EventBus } from '@classes/EventBus';
-import type { TMessage } from '@controllers/MessageListController/types';
+import type { TMessage } from '../../controllers/MessageListController/types.ts';
+import { EventBus } from '../EventBus/index.ts';
 
 export enum WSTransportEvents {
   Connected = 'connected',

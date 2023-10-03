@@ -1,6 +1,6 @@
-import type { TUser } from '@api/AuthAPI/types';
-import type { TChatInfo } from '@api/ChatListAPI/types';
-import type { TMessage } from '@controllers/MessageListController/types';
+import type { TUser } from '../../api/AuthAPI/types.ts';
+import type { TChatInfo } from '../../api/ChatListAPI/types.ts';
+import type { TMessage } from '../../controllers/MessageListController/types.ts';
 
 export type TState = {
   user: TUser;

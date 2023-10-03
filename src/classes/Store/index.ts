@@ -1,8 +1,8 @@
-import type { TBlockConstructable } from '@classes/Block/types';
-import { EventBus } from '@classes/EventBus';
-import type { TState } from '@classes/Store/types';
-import { isEqual } from '@utils/isEqual';
-import { set } from '@utils/set';
+import { isEqual } from '../../utils/isEqual.ts';
+import { set } from '../../utils/set.ts';
+import type { TBlockConstructable } from '../Block/types.ts';
+import { EventBus } from '../EventBus/index.ts';
+import type { TState } from '../Store/types.ts';
 
 export enum StoreEvents {
   Updated = 'updated',

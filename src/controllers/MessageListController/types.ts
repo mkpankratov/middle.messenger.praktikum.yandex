@@ -1,4 +1,4 @@
-import type { TUser } from '@api/AuthAPI/types';
+import type { TUser } from '../../api/AuthAPI/types.ts';
 
 export type TMessage = {
   chat_id: number;

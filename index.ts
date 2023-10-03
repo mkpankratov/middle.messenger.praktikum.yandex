@@ -1,7 +1,7 @@
-import { ComponentRegister } from '@classes/ComponentRegister';
-import { router } from '@classes/Router';
-import { componentList } from '@components/index';
-import { pageList } from '@pages/index';
+import { ComponentRegister } from './src/classes/ComponentRegister/index.ts';
+import { router } from './src/classes/Router/index.ts';
+import { componentList } from './src/components/index.ts';
+import { pageList } from './src/pages/index.ts';
 
 document.addEventListener('DOMContentLoaded', async () => {
   new ComponentRegister({ ...componentList, ...pageList });

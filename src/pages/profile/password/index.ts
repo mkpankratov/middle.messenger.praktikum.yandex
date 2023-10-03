@@ -1,8 +1,8 @@
-import type { TUpdatePassword } from '@api/UserAPI/types';
-import { Block } from '@classes/Block';
-import { router } from '@classes/Router';
-import { userController } from '@controllers/UserController';
-import templateString from '@pages/profile/password/template';
+import type { TUpdatePassword } from '../../../api/UserAPI/types.ts';
+import { Block } from '../../../classes/Block/index.ts';
+import { router } from '../../../classes/Router/index.ts';
+import { userController } from '../../../controllers/UserController/index.ts';
+import templateString from './template.ts';
 
 export class EditPasswordPage extends Block {
   static template = this.hbsCompile(templateString);

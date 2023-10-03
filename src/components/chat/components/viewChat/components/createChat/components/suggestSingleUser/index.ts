@@ -1,6 +1,6 @@
-import { Block } from '@classes/Block';
-import { withStore } from '@classes/Store';
-import templateString from '@components/chat/components/viewChat/components/createChat/components/suggestSingleUser/template';
+import { Block } from '../../../../../../../../classes/Block/index.ts';
+import { withStore } from '../../../../../../../../classes/Store/index.ts';
+import templateString from './template.ts';
 
 export class SuggestSingleUserBase extends Block {
   static template = this.hbsCompile(templateString);
