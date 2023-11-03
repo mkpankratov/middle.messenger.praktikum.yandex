@@ -1,4 +1,4 @@
-import type { TProps } from '@classes/Block/types';
+import type { TProps } from '../Block/types.ts';
 
 export type TRouteProps = {
   rootProps?: string;

@@ -1,4 +1,4 @@
-import type { AuthAPI } from '@api/AuthAPI';
+import type { AuthAPI } from './index.ts';
 
 export type TAuthAPI = AuthAPI;
 

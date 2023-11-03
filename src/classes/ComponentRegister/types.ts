@@ -1,5 +1,5 @@
-import type { TBlockConstructable } from '@classes/Block/types';
-import type { pageList } from '@pages/index';
+import type { pageList } from '../../pages/index.ts';
+import type { TBlockConstructable } from '../Block/types.ts';
 
 export type TComponentList = {
   [key: string]: TBlockConstructable;

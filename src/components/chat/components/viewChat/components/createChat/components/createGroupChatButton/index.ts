@@ -1,8 +1,8 @@
-import { Block } from '@classes/Block';
-import { withStore } from '@classes/Store';
-import templateString from '@components/chat/components/viewChat/components/createChat/components/createGroupChatButton/template';
-import { chatListController } from '@controllers/ChatListController';
-import { chatViewController } from '@controllers/ChatViewController';
+import { Block } from '../../../../../../../../classes/Block/index.ts';
+import { withStore } from '../../../../../../../../classes/Store/index.ts';
+import { chatListController } from '../../../../../../../../controllers/ChatListController/index.ts';
+import { chatViewController } from '../../../../../../../../controllers/ChatViewController/index.ts';
+import templateString from './template.ts';
 
 export class CreateGroupChatButtonBase extends Block {
   static template = this.hbsCompile(templateString);

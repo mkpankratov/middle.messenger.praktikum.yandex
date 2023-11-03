@@ -1,5 +1,5 @@
-import { Block } from '@classes/Block';
-import templateString from '@components/error/template';
+import { Block } from '../../classes/Block/index.ts';
+import templateString from './template.ts';
 
 export class Error extends Block {
   static template = this.hbsCompile(templateString);

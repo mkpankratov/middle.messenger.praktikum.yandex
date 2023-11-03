@@ -12,7 +12,6 @@ export default `
         <li>{{{NavLink text='Редактировать профиль' to='/settings/edit'}}}</li>
         <li>{{{NavLink text='Сменить аватар' to='/settings/avatar'}}}</li>
         <li>{{{NavLink text='Изменить пароль' to='/settings/password'}}}</li>
-        <li>{{{NavLink text='Редактировать профиль' to='/settings/edit'}}}</li>
       </ol>
     </nav>
   {{/Page}}

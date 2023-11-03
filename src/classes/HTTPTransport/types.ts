@@ -1,4 +1,4 @@
-import type { EMethodList } from '@classes/HTTPTransport/constants';
+import type { EMethodList } from './constants.ts';
 
 export type TOptions = {
   method: EMethodList;

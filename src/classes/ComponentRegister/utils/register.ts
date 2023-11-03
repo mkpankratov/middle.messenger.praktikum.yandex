@@ -1,6 +1,7 @@
-import type { TRegister } from '@classes/ComponentRegister/utils/types';
 import type { HelperOptions } from 'handlebars';
 import Handlebars from 'handlebars';
+
+import type { TRegister } from '../../ComponentRegister/utils/types.ts';
 
 export const register: TRegister = (name, Component) => {
   if (name in Handlebars.helpers) {

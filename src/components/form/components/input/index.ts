@@ -1,8 +1,8 @@
-import { Block } from '@classes/Block';
-import type { TProps } from '@classes/Block/types';
-import templateString from '@components/form/components/input/template';
-import { validate } from '@utils/validate';
-import type { TValidateEvent } from '@utils/validate/types';
+import { Block } from '../../../../classes/Block/index.ts';
+import type { TProps } from '../../../../classes/Block/types.ts';
+import { validate } from '../../../../utils/validate/index.ts';
+import type { TValidateEvent } from '../../../../utils/validate/types.ts';
+import templateString from './template.ts';
 
 export class Input extends Block {
   static template = this.hbsCompile(templateString);

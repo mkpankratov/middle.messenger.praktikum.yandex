@@ -1,7 +1,7 @@
-import { ruleList } from '@utils/validate/constants';
-import { evaluateString } from '@utils/validate/helpers/evaluateString';
-import { parseValidateRules } from '@utils/validate/helpers/parseValidateRules';
-import type { TValidate, TValidateReturn } from '@utils/validate/types';
+import { ruleList } from './constants.ts';
+import { evaluateString } from './helpers/evaluateString.ts';
+import { parseValidateRules } from './helpers/parseValidateRules.ts';
+import type { TValidate, TValidateReturn } from './types.ts';
 
 export const validate: TValidate = (rulesString, event) => {
   const value = event.target.value;

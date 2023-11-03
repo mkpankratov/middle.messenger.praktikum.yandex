@@ -1,4 +1,4 @@
-import type { TRuleList } from '@utils/validate/types';
+import type { TRuleList } from 'utils/validate/types.ts';
 
 export const ruleList: TRuleList = {
   latinOrCyrillic: {

@@ -1,7 +1,7 @@
-import type { TChatInfo } from '@api/ChatListAPI/types';
-import { store } from '@classes/Store';
-import { WSTransport, WSTransportEvents } from '@classes/WSTransport';
-import type { TMessage } from '@controllers/MessageListController/types';
+import type { TChatInfo } from '../../api/ChatListAPI/types.ts';
+import { store } from '../../classes/Store/index.ts';
+import { WSTransport, WSTransportEvents } from '../../classes/WSTransport/index.ts';
+import type { TMessage } from '../../controllers/MessageListController/types.ts';
 
 class MessageListController {
   private sockets: Map<number, WSTransport> = new Map();

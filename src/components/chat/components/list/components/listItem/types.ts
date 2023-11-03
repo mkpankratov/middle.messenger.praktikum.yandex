@@ -1,4 +1,4 @@
-import type { TChatInfo } from '@api/ChatListAPI/types';
+import type { TChatInfo } from 'api/ChatListAPI/types.ts';
 
 export type TListItemProps = {
   data: TChatInfo;

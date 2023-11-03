@@ -1,7 +1,7 @@
-import { Block } from '@classes/Block';
-import type { TProps } from '@classes/Block/types';
-import templateString from '@components/form/template';
-import type { TValue } from '@components/form/types';
+import { Block } from '../../classes/Block/index.ts';
+import type { TProps } from '../../classes/Block/types.ts';
+import templateString from './template.ts';
+import type { TValue } from './types.ts';
 
 export class Form extends Block {
   static template = this.hbsCompile(templateString);

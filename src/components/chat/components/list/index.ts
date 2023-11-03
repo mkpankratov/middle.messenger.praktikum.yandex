@@ -1,7 +1,7 @@
-import { Block } from '@classes/Block';
-import { withStore } from '@classes/Store';
-import templateString from '@components/chat/components/list/template';
-import { chatViewController } from '@controllers/ChatViewController';
+import { Block } from '../../../../classes/Block/index.ts';
+import { withStore } from '../../../../classes/Store/index.ts';
+import { chatViewController } from '../../../../controllers/ChatViewController/index.ts';
+import templateString from './template.ts';
 
 export class ListBase extends Block {
   static template = this.hbsCompile(templateString);

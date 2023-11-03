@@ -1,4 +1,4 @@
-import type { Block } from '@classes/Block';
+import type { Block } from 'classes/Block/index.ts';
 
 export function renderDOM(query: string, block: Block) {
   const root = document.querySelector(query);
